@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+@keyframes kcnShine {
+  from {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  to {
+    transform: translateX(420%) skewX(-18deg);
+  }
+}
+
+.kcn-cta:hover .kcn-shine {
+  animation: kcnShine 0.9s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kcn-cta:hover .kcn-shine {
+    animation: none;
+  }
+}
